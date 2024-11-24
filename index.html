@@ -1,12 +1,99 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-  <h1>How To Code (and not be a stupid skid)</h1>
-  <h2>Index</h2>
-  <a id="basics">Basics</a>
-  <h2 id="basics">Basics</h2>
-  <p>
-    A variable is very useful if you do not want to call something over and over again, such as
-  </p>
-</head>
+	<head>
+		<style>
+			h1 {
+				font-family: Arial;
+			}
+			h2 {
+				font-family: Arial;
+			}
+			h3 {
+				font-family: Arial;
+			}
+			p {
+				font-family: Arial;
+			}
+			a {
+				font-family: Arial;
+			}
+			code {
+				font-family: Courier New;
+			}
+			pre {
+				border: 2px solid black;
+			}
+		</style>
+		<h1>How To Code (Skid To Dev)</h1>
+		<h2>Index</h2>
+		<a href="#basics">Basics</a>
+		<br>
+		<a href="#variables">&emsp;Variables</a>
+		<br>
+		<a href="#functions">&emsp;Functions</a>
+		<div>
+			<h2 id="basics">Basics</h2>
+			<h3 id="variables">Variables</h3>
+			<p>
+				A variable is very useful if you do not want to call something over and over again, such as if you want to print one thing over and over.
+			</p>
+			<div>
+				<pre>
+					<code><br>print("test")<br>print("test")<br>print("test")<br>print("test")<br>print("test")</code>
+				</pre>
+			</div>
+			<p>
+				You can then turn it into
+			</p>
+			<div>
+				<pre>
+					<code><br>local t = "test"<br>print(t)<br>print(t)<br>print(t)<br>print(t)<br>print(t)</code>
+				</pre>
+			</div>
+			<p>
+				You can also change variables as much as you like.
+			</p>
+			<div>
+				<pre>
+					<code><br>local t = "test"<br>print(t)<br>print(t)<br>t = "test2"<br>print(t)<br>print(t)<br>print(t)</code>
+				</pre>
+			</div>
+			<p>
+				This would output<br>test<br>test<br>test2<br>test2<br>test2
+			</p>
+			
+			
+			
+			<h3 id="functions">Functions</h3>
+			<p>
+				Functions do an Input, then an Output. Such as
+			</p>
+			<div>
+				<pre>
+					<code><br>function a(text)<br>&emsp;print(text)<br>end</code>
+				</pre>
+			</div>
+			<p>
+			<p>
+				However, the input is optional (if you don't need it)
+			</p>
+			<div>
+				<pre>
+					<code><br>function a()<br>&emsp;print("idk")<br>end</code>
+				</pre>
+			</div>
+			<p>
+				To call a function, you need to put the function name, and then parenthesis after (inside, you put the input.)
+			</p>
+			<div>
+				<pre>
+					<code><br>function a(text)<br>&emsp;print(text)<br>end<br>a("test")</code>
+				</pre>
+			</div>
+			<p>
+				Which outputs<br>test
+			</p>
+			<p>You can write whatever you want in the function, as long as it is closed with an <a href="#end">end</a> statement.</p>
+		</div>
+	</head>
 </html>
