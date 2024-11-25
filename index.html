@@ -11,6 +11,15 @@
 			h3 {
 				font-family: Arial;
 			}
+			h4 {
+				font-family: Arial;
+			}
+			h5 {
+				font-family: Arial;
+			}
+			h6 {
+				font-family: Arial;
+			}
 			p {
 				font-family: Arial;
 			}
@@ -21,9 +30,11 @@
 				font-family: Courier New;
 			}
 			pre {
-				border: 2px solid black;
+				/* border: 2px solid green; */
 			}
 		</style>
+		<script src="prism.js"></script>
+		<link href="prism.css" rel="stylesheet" />
 		<h1>How To Code (Skid To Dev)</h1>
 		<h2>Index</h2>
 		<a href="#basics">Basics</a>
@@ -31,23 +42,50 @@
 		<a href="#variables">&emsp;Variables</a>
 		<br>
 		<a href="#functions">&emsp;Functions</a>
+		<br>
+		<a href="#if">&emsp;If statements</a>
+		<br>
+		<a href="#operations">&emsp;Operations</a>
+		<br>
+		<a href="#end">&emsp;End Statements</a>
+		<br>
+		<a href="#for">&emsp;For Statements</a>
 		<div>
 			<h2 id="basics">Basics</h2>
 			<h3 id="variables">Variables</h3>
 			<p>
 				A variable is very useful if you do not want to call something over and over again, such as if you want to print one thing over and over.
 			</p>
-			<div>
-				<pre>
-					<code><br>print("test")<br>print("test")<br>print("test")<br>print("test")<br>print("test")</code>
-				</pre>
-			</div>
 			<p>
-				You can then turn it into
+				You call a variable with "local", the variable name, the equals sign, and then the value you want to do.
 			</p>
 			<div>
 				<pre>
-					<code><br>local t = "test"<br>print(t)<br>print(t)<br>print(t)<br>print(t)<br>print(t)</code>
+<code class="lang-lua">local variablename = 69</code>
+				</pre>
+			</div>
+			<p>
+				Here is what code looks like before/after a variable is used.
+			</p>
+			<div>
+				<pre>
+<code class="lang-lua">
+print("test")
+print("test")
+print("test")
+print("test")
+print("test")</code>
+				</pre>
+			</div>
+			<div>
+				<pre>
+<code class="lang-lua">
+local t = "test"
+print(t)
+print(t)
+print(t)
+print(t)
+print(t)</code>
 				</pre>
 			</div>
 			<p>
@@ -55,22 +93,44 @@
 			</p>
 			<div>
 				<pre>
-					<code><br>local t = "test"<br>print(t)<br>print(t)<br>t = "test2"<br>print(t)<br>print(t)<br>print(t)</code>
+<code class="lang-lua">
+local t = "test"
+print(t)
+print(t)
+t = "test2"
+print(t)
+print(t)
+print(t)</code>
 				</pre>
 			</div>
 			<p>
-				This would output<br>test<br>test<br>test2<br>test2<br>test2
+				This would output
+<br>
+test
+<br>
+test
+<br>
+test2
+<br>
+test2
+<br>
+test2
 			</p>
 			
 			
 			
 			<h3 id="functions">Functions</h3>
 			<p>
+				To create a function, enter in "function", the function name, parenthesis (inside the parenthesis, put the input), write code after, and close it off with <a href="#end">end</a>. <br>
+				<br>
 				Functions do an Input, then an Output. Such as
 			</p>
 			<div>
 				<pre>
-					<code><br>function a(text)<br>&emsp;print(text)<br>end</code>
+<code class="lang-lua">
+function a(text)
+    print(text)
+end</code>
 				</pre>
 			</div>
 			<p>
@@ -79,7 +139,10 @@
 			</p>
 			<div>
 				<pre>
-					<code><br>function a()<br>&emsp;print("idk")<br>end</code>
+<code class="lang-lua">
+function a()
+    print("idk")
+end</code>
 				</pre>
 			</div>
 			<p>
@@ -87,13 +150,258 @@
 			</p>
 			<div>
 				<pre>
-					<code><br>function a(text)<br>&emsp;print(text)<br>end<br>a("test")</code>
+<code class="lang-lua">
+function a(text)
+    print(text)
+end
+a("test")</code>
 				</pre>
 			</div>
 			<p>
-				Which outputs<br>test
+				Which outputs<br>
+test
 			</p>
 			<p>You can write whatever you want in the function, as long as it is closed with an <a href="#end">end</a> statement.</p>
+			<h3 id="if">If Statements</h3>
+			<p>
+				If you do not know the operations "<" ">" "==" "~=", then click <a href="#operations">here</a>
+			</p>
+			<p>
+				If statements check if something is true, and executes the code from the if statement to the <a href="#end">end</a>.</p>
+			</p>
+			<pre>
+				<code class="lang-lua">
+local x = 999
+local y = 999
+if x == y then
+	print("This code should execute!")
+end
+x = 0
+y = 999
+if x == y then
+	print("This code shouldn't execute!")
+end
+print("This code will execute no matter what since it is outside the if statement.")</code>
+			</pre>
+			<h3 id="operations">Operations</h3>
+			<p>
+				Operations are useful for <a href="#if">if statements</a>, or making something equal to another thing.
+			</p>
+			<p>
+				You cannot use the Equal Sign for <a href="#if">if statements</a>.
+			</p>
+			<h4>Equal Sign Operator (=)</h4>
+			<p>
+				The equal operator makes something equal another thing.
+			</p>
+			<pre>
+<code class="lang-lua">local s = 123901239012390</code>
+			</pre>
+			<h4>Double Equal Sign Operator (==)</h4>
+			<p>
+				The double equal operator returns true when something is equal to another thing.
+			</p>
+			<pre>
+<code class="lang-lua">
+local x = 1
+local y = 2
+if x == y then
+	print("This shouldn't execute because x is not equal to y.")
+end</code>
+			</pre>
+			<h4>Inequality Operator (~=)</h4>
+			<p>
+				The Inequality operator returns true when something is not equal to another thing.
+			</p>
+			<pre>
+<code class="lang-lua">
+local x = 1
+local y = 2
+if x ~= y then
+	print("This should execute because x is not equal to y.")
+end</code>
+			</pre>
+			<h4>Greater Than Operator (>)</h4>
+			<p>
+				The Greater Than operator returns true when something is bigger than another thing.
+			</p>
+			<pre>
+<code class="lang-lua">
+local x = 1
+local y = 2
+if x > y then
+	print("This shouldn't execute because x is not bigger than y.")
+end</code>
+			</pre>
+			<h4>Smaller Than Operator (<)</h4>
+			<p>
+				The Smaller Than operator returns true when something is smaller than another thing.
+			</p>
+			<pre>
+<code class="lang-lua">
+local x = 1
+local y = 2
+if x < y then
+	print("This should execute because x is smaller than y.")
+end</code>
+			</pre>
+			<h4>Bigger Than or Equal To Operator (>=)</h4>
+			<p>
+				The Bigger Than or Equal To operator returns true when something is bigger than another thing or equals to the other thing.
+			</p>
+			<pre>
+<code class="lang-lua">
+local x = 1
+local y = 2
+if x >= y then
+	print("This shouldn't execute because x is not bigger or equal to y.")
+end</code>
+			</pre>
+			<h4>Smaller Than or Equal To Operator (<=)</h4>
+			<p>
+				The Smaller Than or Equal To operator returns true when something is smaller than another thing or equals to the other thing.
+			</p>
+			<pre>
+<code class="lang-lua">
+local x = 1
+local y = 2
+if x <= y then
+	print("This should execute because x is smaller than y (however not equal to.)")
+end</code>
+			</pre>
+			<h3 id="end">End Statements</h3>
+			<p>
+				The end statement is needed for closing off functions like if, function, for, and more.
+			</p>
+			<p>
+				To "end" a function, simply put end after the code you written
+			</p>
+			<pre>
+<code class="lang-lua">
+if 2 == 2 then
+	print("if you read this text")
+	print("you are")
+	print("gay")
+end -- see look at that</code>
+			</pre>
+			<h3 id="for">For Statements</h3>
+			<p>
+				A for statement has a <a href="#nfs">Numeric</a> version (looping a number) and a <a href="#gfs">Generic</a> version (looping through a <a href="#table">table</a>.)
+			</p>
+			<h4 id="nfs">Numeric for statement</h4>
+			<p>
+				A numeric for statement works like this:<br><br>Customizable variables (updated with the loop number each iteration/loop):
+			</p>
+			<pre>
+<code class="lang-lua">for i</code>
+			</pre>
+			<p>
+				 Minimum & Maximum:
+			</p>
+			<pre>
+<code class="lang-lua">for i = 5,10</code>
+			</pre>
+			<p>
+				Increments (default is 1):
+			</p>
+			<pre>
+<code class="lang-lua">for i = 5,10,1</code>
+			</pre>
+			<p>
+				A Do statement (mostly used in for statements so not really much about it):
+			</p>
+			<pre>
+<code class="lang-lua">for i = 5,10,1 do</code>
+			</pre>
+			<p>
+				Code written inside:
+			</p>
+			<pre>
+<code class="lang-lua">for i = 5,10,1 do
+	print(i)</code>
+			</pre>
+			<p>
+				An end statement to close it off:<br><br>And the final result is this
+			</p>
+			<pre>
+<code class="lang-lua">
+for i = 5,10,1 do -- you can leave the last number (1) blank since the for loop already defaults to 1. So this line would look like for i = 5,10 do
+	print(i)
+end</code>
+			</pre>
+			<p>
+				Which outputs<br>5<br>6<br>7<br>8<br>9<br>10
+			</p>
+			<p>
+				If we change the incement of the for statement like this
+			</p>
+			<pre>
+<code class="lang-lua">
+for i = 5,10,2 do
+	print(i)
+end</code>
+			</pre>
+			<p>
+				It will output<br>5<br>7<br>9
+			</p>
+			<p>
+				This is because every iteration/loop, it checks if the number is bigger or smaller than the maximum/minimum. If its bigger/smaller, then the loop will end, and continue on with the other code not inside the loop.
+			</p>
+			<h4 id="gfs">Generic for statement</h4>
+			<p>
+				A generic for statement loops through a <a href="#table">table</a>, updating the customizable variables each loop. It is structured like this:
+			</p>
+			<p>
+				The index and value of the <a href="#table">table</a>:
+			</p>
+<pre>
+<code class="lang-lua">for i,v</code>
+</pre>
+			<p>
+				The in statement (this is needed, but it does nothing):
+			</p>
+<pre>
+<code class="lang-lua">for i,v in</code>
+</pre>
+			<p>
+				The pairs statement (gets both the looped index and values in a <a href="#table">table</a>, using ipairs is the same but I just use pairs):
+			</p>
+<pre>
+<code class="lang-lua">for i,v in pairs</code>
+</pre>
+			<p>
+				Parenthesis after the pairs statement to complete it (put the <a href="#table">table</a> you want to loop through inside the parenthesis):
+			</p>
+			<p>
+				if you are wondering what the pairs statement does, it basically just returns both the index and value.
+			</p>
+<pre>
+<code class="lang-lua">for i,v in pairs({"a","b","c"})</code>
+</pre>
+			<p>
+				A Do statement (mostly used in for statements so not really much about it):
+			</p>
+<pre>
+<code class="lang-lua">for i,v in pairs({"a","b","c"}) do</code>
+</pre>
+			<p>
+				Code written inside:
+			</p>
+<pre>
+<code class="lang-lua">for i,v in pairs({"a","b","c"}) do
+	print(i,v)</code>
+</pre>
+			<p>
+				An end statement to close it off:<br><br>And the final result is this
+			</p>
+<pre>
+<code class="lang-lua">for i,v in pairs({"a","b","c"}) do
+	print(i,v)
+end</code>
+</pre>
+			<p>
+				This should output<br>1 a<br>2 b<br>3 c
+			</p>
 		</div>
 	</head>
 </html>
