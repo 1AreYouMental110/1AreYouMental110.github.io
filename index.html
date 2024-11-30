@@ -133,8 +133,9 @@ test2
 			</p>
 			<div>
 <pre>
-<code class="lang-lua">function a(text) -- inside the parenthesis put the "input" you want
-    print(text)
+<code class="lang-lua">function add20(num) -- inside the parenthesis put the "input" you want
+    num = num + 20
+    return num -- the "return" line is optional if you want an output.
 end</code>
 </pre>
 			</div>
@@ -144,8 +145,9 @@ end</code>
 			</p>
 			<div>
 <pre>
-<code class="lang-lua">function a()
-    print("idk")
+<code class="lang-lua">function put20()
+    local num = 20
+    return num
 end</code>
 </pre>
 			</div>
@@ -154,10 +156,11 @@ end</code>
 			</p>
 			<div>
 <pre>
-<code class="lang-lua">function a(text)
-    print(text)
+<code class="lang-lua">function add20(num)
+    num = num + 20
+    return num
 end
-a("test")</code>
+print(add20(50)) -- this would print 70 since the function adds 20 to the input (which was 50)</code>
 </pre>
 			</div>
 			<p>
